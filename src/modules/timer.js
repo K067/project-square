@@ -21,7 +21,6 @@ const timer = (deadline) => {
         timerMinutes.textContent = getTime.minutes.toLocaleString('ru', { minimumIntegerDigits: 2 });
         timerSeconds.textContent = getTime.seconds.toLocaleString('ru', { minimumIntegerDigits: 2 });
 
-
         if (getTime.timeRemaining > 0) {
             setInterval(updateClock, 1000);
         } else {
@@ -30,7 +29,6 @@ const timer = (deadline) => {
             timerMinutes.textContent = '00';
             timerSeconds.textContent = '00';
         }
-        console.log(getTime.seconds);
     };
     updateClock();
 };
