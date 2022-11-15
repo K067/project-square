@@ -23,10 +23,7 @@ const timer = (deadline) => {
 
 
         if (getTime.timeRemaining > 0) {
-            let genesis = setInterval(() => {
-                updateClock();
-                // clearInterval(genesis);
-            }, 1000);
+            setInterval(updateClock, 1000);
         } else {
             clearInterval(setInterval);
             timerHours.textContent = '00';
