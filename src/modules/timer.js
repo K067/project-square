@@ -25,7 +25,7 @@ const timer = (deadline) => {
         if (getTime.timeRemaining > 0) {
             let genesis = setInterval(() => {
                 updateClock();
-                clearInterval(genesis);
+                // clearInterval(genesis);
             }, 1000);
         } else {
             clearInterval(setInterval);
@@ -33,8 +33,8 @@ const timer = (deadline) => {
             timerMinutes.textContent = '00';
             timerSeconds.textContent = '00';
         }
+        console.log(getTime.seconds);
     };
     updateClock();
-
 };
 export default timer;
