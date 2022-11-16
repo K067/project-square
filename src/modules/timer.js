@@ -21,7 +21,7 @@ const timer = (deadline) => {
         timerSeconds.textContent = getTime.seconds.toLocaleString('ru', { minimumIntegerDigits: 2 });
 
         if (getTime.timeRemaining > 0) {
-            setInterval(updateClock, 1000);
+            clearInterval(setInterval);
         } else {
             clearInterval(setInterval);
             timerHours.textContent = '00';
@@ -30,5 +30,6 @@ const timer = (deadline) => {
         }
     };
     updateClock();
+    setInterval(updateClock, 1000);
 };
 export default timer;
