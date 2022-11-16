@@ -31,6 +31,7 @@ const modal = () => {
     });
     closeBtn.addEventListener('click', () => {
         modal.style.display = 'none';
+        count = -10;
     });
 };
 
