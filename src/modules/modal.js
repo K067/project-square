@@ -20,7 +20,7 @@ const modal = () => {
 
     const width = () => {
         if (document.documentElement.clientWidth > 768) {
-            modalAnim();
+            return true;
         } else {
             return false;
         }
@@ -30,7 +30,9 @@ const modal = () => {
         btn.addEventListener('click', () => {
             modal.style.display = 'block';
 
-            width();
+            if (width() === true) {
+                modalAnim();
+            }
         });
     });
     closeBtn.addEventListener('click', () => {
