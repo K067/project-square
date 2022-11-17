@@ -3,6 +3,8 @@ const timer = (deadline) => {
     const timerMinutes = document.getElementById('timer-minutes');
     const timerSeconds = document.getElementById('timer-seconds');
 
+    let timerId;
+
     const getTimeRemaining = () => {
         let dateStop = new Date(deadline).getTime();
         let dateNow = new Date().getTime();
@@ -21,7 +23,7 @@ const timer = (deadline) => {
         timerSeconds.textContent = getTime.seconds.toLocaleString('ru', { minimumIntegerDigits: 2 });
 
         if (getTime.timeRemaining < 0) {
-            clearInterval(a);
+            clearInterval(timerId);
             timerHours.textContent = '00';
             timerMinutes.textContent = '00';
             timerSeconds.textContent = '00';
@@ -29,7 +31,6 @@ const timer = (deadline) => {
         console.log(getTime.seconds);
 
     };
-    let a = setInterval(updateClock);
-    updateClock();
+    timerId = setInterval(updateClock);
 };
 export default timer;
