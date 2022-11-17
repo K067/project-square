@@ -3,12 +3,12 @@ const modal = () => {
     const modal = document.querySelector('.popup');
     const closeBtn = modal.querySelector('.popup-close');
     const content = modal.querySelector('.popup-content');
-    const width = document.documentElement.clientWidth;
 
     let count = -10;
 
     const modalAnim = () => {
         let moveIt = requestAnimationFrame(modalAnim);
+
         count++;
 
         if (count < 5) {
@@ -18,15 +18,19 @@ const modal = () => {
         }
     };
 
+    const width = () => {
+        if (document.documentElement.clientWidth > 768) {
+            modalAnim();
+        } else {
+            return false;
+        }
+    };
+
     buttons.forEach(btn => {
         btn.addEventListener('click', () => {
             modal.style.display = 'block';
 
-            if (width < 768) {
-                return false;
-            }
-
-            modalAnim();
+            width();
         });
     });
     closeBtn.addEventListener('click', () => {
