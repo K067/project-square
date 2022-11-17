@@ -17,20 +17,13 @@ const modal = () => {
             cancelAnimationFrame(moveIt);
         }
     };
-
-    const width = () => {
-        if (document.documentElement.clientWidth > 768) {
-            return true;
-        } else {
-            return false;
-        }
-    };
+    const width = () => document.documentElement.clientWidth > 768;
 
     buttons.forEach(btn => {
         btn.addEventListener('click', () => {
             modal.style.display = 'block';
 
-            if (width() === true) {
+            if (width()) {
                 modalAnim();
             }
         });
