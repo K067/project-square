@@ -20,16 +20,16 @@ const timer = (deadline) => {
         timerMinutes.textContent = getTime.minutes.toLocaleString('ru', { minimumIntegerDigits: 2 });
         timerSeconds.textContent = getTime.seconds.toLocaleString('ru', { minimumIntegerDigits: 2 });
 
-        if (getTime.timeRemaining > 0) {
-            clearInterval(setInterval);
-        } else {
-            clearInterval(setInterval);
+        if (getTime.timeRemaining < 0) {
+            clearInterval(a);
             timerHours.textContent = '00';
             timerMinutes.textContent = '00';
             timerSeconds.textContent = '00';
         }
+        console.log(getTime.seconds);
+
     };
+    let a = setInterval(updateClock);
     updateClock();
-    setInterval(updateClock, 1000);
 };
 export default timer;
