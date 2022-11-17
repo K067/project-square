@@ -27,8 +27,12 @@ const timer = (deadline) => {
             timerHours.textContent = '00';
             timerMinutes.textContent = '00';
             timerSeconds.textContent = '00';
+            return false;
         }
+        return true;
     };
-    timerId = setInterval(updateClock);
+    if (updateClock()) {
+        timerId = setInterval(updateClock, 1000);
+    }
 };
 export default timer;
