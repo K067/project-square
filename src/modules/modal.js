@@ -6,16 +6,11 @@ const modal = () => {
     const width = document.documentElement.clientWidth;
 
     let count = -10;
-    let moveIt;
-    let timeId;
 
     const modalAnim = () => {
+        let moveIt = requestAnimationFrame(modalAnim);
         count++;
-        moveIt = requestAnimationFrame(modalAnim);
 
-        if (width < 768) {
-            return false;
-        }
         if (count < 5) {
             content.style.top = count * 20 + 'px';
         } else {
@@ -26,6 +21,10 @@ const modal = () => {
     buttons.forEach(btn => {
         btn.addEventListener('click', () => {
             modal.style.display = 'block';
+
+            if (width < 768) {
+                return false;
+            }
 
             modalAnim();
         });
