@@ -7,6 +7,7 @@ const modal = () => {
 
     let count = -10;
     let moveIt;
+    let timeId;
 
     const modalAnim = () => {
         count++;
