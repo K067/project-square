@@ -2,14 +2,12 @@ const dots = () => {
     const allDots = document.querySelector('.portfolio-dots');
     const item = document.querySelectorAll('.portfolio-item');
 
-    item.forEach(() => {
-        allDots.append(document.createElement('li'));
+    item.forEach((i) => {
+        const li = document.createElement('li');
 
-        let li = allDots.querySelectorAll('li');
+        li.className = `dot${!i ? ' dot-active' : ''}`;
 
-        li.forEach((i) => {
-            i.className = `dot${!i ? ' dot-active' : ''}`;
-        });
+        allDots.append(li);
     });
 };
 
