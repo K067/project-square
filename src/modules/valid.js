@@ -1,6 +1,5 @@
 const valid = () => {
-
-    const calc = document.querySelectorAll('.calc-item');
+    const calc = document.querySelectorAll('.calc-item:not(.calc-type)');
     const emails = document.querySelectorAll('input[name=user_email]');
     const dial = document.querySelectorAll('input[name=user_phone]');
     const message = document.querySelector('input[name=user_message]');
@@ -15,6 +14,7 @@ const valid = () => {
             e.target.value = e.target.value.replace(/[^а-яА-Я- ]/, '');
         });
     });
+
     calc.forEach((value) => {
         value.addEventListener('input', (e) => {
             e.target.value = e.target.value.replace(/\D+/, '');
