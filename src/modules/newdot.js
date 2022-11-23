@@ -8,7 +8,7 @@ const dots = () => {
 
         let li = allDots.querySelectorAll('li');
 
-        li.forEach((i = 0) => {
+        li.forEach((i) => {
             i.className = `dot${!i ? ' dot-active' : ''}`;
         });
     });
