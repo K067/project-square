@@ -3,7 +3,7 @@ const dots = () => {
     const item = document.querySelectorAll('.portfolio-item');
 
 
-    item.forEach((e) => {
+    item.forEach(() => {
         allDots.append(document.createElement('li').className = 'dot');
         let li = allDots.querySelectorAll('li');
 
