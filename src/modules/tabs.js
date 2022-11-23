@@ -5,7 +5,7 @@ const tabs = () => {
 
     tabPanel.addEventListener('click', (e) => {
         if (e.target.closest('.service-header-tab')) {
-            console.log(e);
+
             const tabBtn = e.target.closest('.service-header-tab');
 
             tabs.forEach((tab, index) => {
