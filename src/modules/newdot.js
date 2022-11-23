@@ -4,7 +4,7 @@ const dots = () => {
 
 
     item.forEach(() => {
-        allDots.append(document.createElement('li').className = 'dot');
+        allDots.append(document.createElement('li'));
         let li = allDots.querySelectorAll('li');
 
         li.forEach((elem) => {
