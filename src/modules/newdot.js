@@ -2,7 +2,6 @@ const dots = () => {
     const allDots = document.querySelector('.portfolio-dots');
     const item = document.querySelectorAll('.portfolio-item');
 
-
     item.forEach(() => {
         allDots.append(document.createElement('li'));
 
