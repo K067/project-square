@@ -5,13 +5,11 @@ const dots = () => {
 
     item.forEach(() => {
         allDots.append(document.createElement('li'));
+
         let li = allDots.querySelectorAll('li');
 
-        li.forEach((elem) => {
-            elem.className = 'dot';
-            if (elem === 0) {
-                elem.className = 'dot-active';
-            }
+        li.forEach((i = 0) => {
+            i.className = `dot${!i ? ' dot-active' : ''}`;
         });
     });
 };
