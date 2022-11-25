@@ -70,15 +70,15 @@ const slider = () => {
 
     content.addEventListener('mouseenter', (e) => {
         if (e.target.matches('.dot, .portfolio-btn')) {
-            // stopSlide();
+            stopSlide();
         }
     }, true);
     content.addEventListener('mouseleave', (e) => {
         if (e.target.matches('.dot, .portfolio-btn')) {
-            // startSlide(timeInt);
+            startSlide(timeInt);
         }
     }, true);
 
-    // startSlide(timeInt);
+    startSlide(timeInt);
 };
 export default slider;

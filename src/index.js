@@ -14,4 +14,4 @@ valid();
 tabs();
 dot();
 slider();
-calc(100);
+calc();
