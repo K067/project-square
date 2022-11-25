@@ -1,20 +1,20 @@
+import { animate } from './helpers.js';
+
 const modal = () => {
     const buttons = document.querySelectorAll('.popup-btn');
     const modal = document.querySelector('.popup');
     const content = modal.querySelector('.popup-content');
 
-    let count = -10;
-
     const modalAnim = () => {
-        let moveIt = requestAnimationFrame(modalAnim);
-
-        count++;
-
-        if (count < 5) {
-            content.style.top = count * 20 + 'px';
-        } else {
-            cancelAnimationFrame(moveIt);
-        }
+        animate({
+            duration: 100,
+            timing(timeFraction) {
+                return timeFraction;
+            },
+            draw(progress) {
+                content.style.top = progress * 10 + '%';
+            }
+        });
     };
     const width = () => document.documentElement.clientWidth > 768;
     buttons.forEach(btn => {
