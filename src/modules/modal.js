@@ -7,21 +7,22 @@ const modal = () => {
 
     const modalAnim = () => {
         animate({
-            duration: 100,
+            duration: 300,
             timing(timeFraction) {
                 return timeFraction;
             },
             draw(progress) {
-                content.style.top = progress * 10 + '%';
+                content.style.top = -100 + progress * 115 + '%';
             }
         });
     };
     const width = () => document.documentElement.clientWidth > 768;
+
     buttons.forEach(btn => {
         btn.addEventListener('click', () => {
             modal.style.display = 'block';
 
-            if (width()) {
+            if (width) {
                 modalAnim();
             }
         });
