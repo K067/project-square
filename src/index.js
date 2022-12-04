@@ -44,7 +44,5 @@ formSending({
         }
     ]
 });
-
-
 maskPhone('[name="user_phone"]', '+7 (___) ___-__-__');
 

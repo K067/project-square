@@ -9,7 +9,7 @@ const validate = list => {
                 }
                 break;
             case 'user_phone':
-                if (elem.value.length === 17) {
+                if (elem.value.length === 18) {
                     return;
                 }
                 break;

@@ -13,7 +13,8 @@ const maskPhone = (selector, masked = '+7 (___) ___-__-__') => {
 
         i = newValue.indexOf('_');
 
-        if (i !== -1) { newValue = newValue.slice(0, i); }
+        if (i !== -1)
+            newValue = newValue.slice(0, i);
 
         let reg = template.substr(0, target.value.length)
             .replace(/_+/g, ({ length }) => `\\d{1,${length}}`)
