@@ -9,10 +9,6 @@ const valid = () => {
 
     message.addEventListener('input', e => {
         e.target.value = e.target.value.replace(/[^а-яёА-ЯЁ0-9!?,.:;'"()-]/, '');
-
-        if (e.target.classList.contains('error') && validPlus([e.target])) {
-            e.target.classList.remove('error');
-        }
     });
     name.forEach((value) => {
         value.addEventListener('input', e => {

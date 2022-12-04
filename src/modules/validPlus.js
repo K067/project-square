@@ -9,7 +9,7 @@ const validate = list => {
                 }
                 break;
             case 'user_phone':
-                if (elem.value.length === 18) {
+                if (elem.value.length === 17) {
                     return;
                 }
                 break;
@@ -20,6 +20,7 @@ const validate = list => {
                 break;
             default: return;
         }
+
         success = false;
         elem.classList.add('error');
     });
