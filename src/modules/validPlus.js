@@ -9,6 +9,8 @@ const validate = list => {
                 }
                 break;
             case 'user_phone':
+                console.log(elem.value);
+                console.log(elem.value.length);
                 if (elem.value.length === 18) {
                     return;
                 }

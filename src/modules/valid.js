@@ -36,7 +36,7 @@ const valid = () => {
     });
     dial.forEach((value) => {
         value.addEventListener('input', e => {
-            e.target.value = e.target.value.replace(/[^\d()\-\+]+/, '');
+            e.target.value = e.target.value.replace(/[^\d()\-\+ ]+/, '');
 
             if (e.target.classList.contains('error') && validPlus([e.target])) {
                 e.target.classList.remove('error');
