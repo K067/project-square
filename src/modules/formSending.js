@@ -8,6 +8,7 @@ const formSending = ({ id, someElement = [] }) => {
     const successText = 'Ваши данные в надёжных руках';
     const invalidText = 'Форма заполнена неверно';
 
+
     const sendData = data => {
         return fetch('https://jsonplaceholder.typicode.com/posts', {
             method: 'POST',
@@ -63,6 +64,8 @@ const formSending = ({ id, someElement = [] }) => {
         } else {
             statusBlock.style.color = 'red';
             statusBlock.textContent = invalidText;
+
+            setTimeout(() => { statusBlock.textContent = ''; }, 5000);
         }
     };
 
