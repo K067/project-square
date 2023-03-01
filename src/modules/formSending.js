@@ -22,6 +22,7 @@ const formSending = ({ id, someElement = [] }) => {
         const formElements = form.querySelectorAll('input');
         const formData = new FormData(form);
         const formBody = {};
+        console.log(formData);
 
         form.append(statusBlock);
 
